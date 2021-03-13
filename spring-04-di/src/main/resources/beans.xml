@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.kuang.pojo.Address">
+        <property name="address" value="南京"></property>
+    </bean>
+
+    <bean id="student" class="com.kuang.pojo.Student">
+        <!--普通值注入，value-->
+        <property name="name" value="请讲"/>
+        <!--引用注入，ref-->
+        <property name="address" ref="address"/>
+
+        <!--数组注入 -->
+        <property name="books">
+            <array>
+                <value>三国</value>
+                <value>西游</value>
+                <value>水浒</value>
+                <value>红楼</value>
+            </array>
+        </property>
+
+        <!--list列表注入 -->
+        <property name="hobbies">
+            <list>
+                <value>唱</value>
+                <value>跳</value>
+                <value>Rap</value>
+                <value>篮球</value>
+            </list>
+        </property>
+
+        <!--map键值对注入 -->
+        <property name="card">
+            <map>
+                <entry key="username" value="张三"/>
+                <entry key="password" value="123456"/>
+            </map>
+        </property>
+
+        <!--set(可去重)注入 -->
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>王者荣耀</value>
+                <value>斗地主</value>
+            </set>
+        </property>
+
+        <!--空指针null注入 -->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!--properties常量注入 -->
+        <property name="info">
+            <props>
+                <prop key="id">20210312</prop>
+                <prop key="name">李四</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

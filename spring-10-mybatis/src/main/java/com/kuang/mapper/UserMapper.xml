@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!--注意这里因为编码问题将UTF-8改成了UTF8-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--这里同文件路径，同文件名的xml文件编写数据库语句-->
+<!--绑定接口-->
+<mapper namespace="com.kuang.mapper.UserMapper">
+    <select id="selectUser" resultType="user">
+        select * from mybatis.user
+    </select>
+</mapper>

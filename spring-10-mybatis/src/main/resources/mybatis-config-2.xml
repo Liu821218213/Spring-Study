@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!--注意这里因为编码问题将UTF-8改成了UTF8-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--
+这个核心配置文件现在已经完全可以不写了，
+因为所有的mybatis操作已经在spring-dao.xml中完成了，
+写在这里是为了对应spring-dao.xml中的绑定mybatis配置文件的操作
+-->
+
+<!--config核心配置文件-->
+<configuration>
+    <!--别名当作MyBatis的存在的痕迹~-->
+    <typeAliases>
+        <package name="com.kuang.pojo"/>
+    </typeAliases>
+
+<!--
+    <settings>
+        <setting name="" value=""/>
+    </settings>
+-->
+</configuration>
